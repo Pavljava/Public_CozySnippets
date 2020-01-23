@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".EditPaneActivity"
+    android:background="@color/cornysilk"
+    android:theme="@style/Theme.Design.Light.NoActionBar"
+    tools:actionBarNavMode="tabs">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/closeKeyBoardController"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/fab_red_color"
+        android:layout_alignParentRight="true"
+        android:foregroundGravity="right"
+        android:visibility="invisible"
+        android:src="@drawable/backwardarrow" />
+
+    <TextView
+        android:id="@+id/Duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="right|top"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/CurrentProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="left|top|center_horizontal"
+        android:visibility="invisible"/>
+    <EditText
+        android:layout_below="@id/MediaSeekBar"
+        android:id="@+id/edText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="top"
+        android:hint="@string/type"
+        android:textColor="@color/dark_grey"
+        android:inputType="textMultiLine"
+        android:paddingRight="20dp"
+        android:padding="2dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintVertical_bias="0.11"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/layoutfrag"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:foregroundGravity="top|right"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="8dp"
+        android:paddingRight="3dp"
+        />
+
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|right"
+    android:animateLayoutChanges="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintVertical_bias="0.11"
+            fab:menu_animationDelayPerItem="50"
+            fab:menu_backgroundColor="@android:color/transparent"
+            fab:menu_buttonSpacing="0dp"
+            fab:menu_colorNormal="#DA4336"
+            fab:menu_colorPressed="#E75043"
+            fab:menu_colorRipple="#99FFFFFF"
+            fab:menu_fab_size="normal"
+            fab:menu_icon="@drawable/fab_add"
+            fab:menu_labels_colorNormal="#333333"
+            fab:menu_labels_colorPressed="#444444"
+            fab:menu_labels_colorRipple="#66FFFFFF"
+            fab:menu_labels_cornerRadius="3dp"
+            fab:menu_labels_ellipsize="middle"
+            fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            fab:menu_labels_margin="0dp"
+            fab:menu_labels_maxLines="-1"
+            fab:menu_labels_padding="8dp"
+            fab:menu_labels_paddingBottom="4dp"
+            fab:menu_labels_paddingLeft="8dp"
+            fab:menu_labels_paddingRight="8dp"
+            fab:menu_labels_paddingTop="4dp"
+            fab:menu_labels_position="left"
+            fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            fab:menu_labels_showShadow="true"
+            fab:menu_labels_singleLine="false"
+            fab:menu_labels_textColor="#FFFFFF"
+            fab:menu_labels_textSize="14sp"
+            fab:menu_openDirection="up"
+            fab:menu_shadowColor="#66000000"
+            fab:menu_shadowRadius="4dp"
+            fab:menu_shadowXOffset="1dp"
+            fab:menu_shadowYOffset="3dp"
+            fab:menu_showShadow="true"
+            fab:menu_fab_label="Featured">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/Recordbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/presence_audio_online"
+                android:onClick="RecordBtn"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_size="mini"
+                fab:fab_label="Record"
+                app:fab_colorNormal="@color/fade_white"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/PauseRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="PauseRecordBtn"
+                android:src="@android:drawable/ic_media_pause"
+                app:fab_shadowColor="#FDD835"
+                android:visibility="invisible"
+                fab:fab_label="Pause Recording"
+                fab:fab_size="mini" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/playPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_play"
+                android:onClick="playRecordPauseBtn"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_size="mini"
+                fab:fab_label="Play Record" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/deleteRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_delete"
+                android:onClick="Delete_Record"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_size="mini"
+                fab:fab_label="Delete Record" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/speakBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_btn_speak_now"
+                android:onClick="TxtToSpeechbtnAction"
+                fab:fab_size="mini"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_label="Speak Note" />
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/sharebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_share"
+                android:onClick="shareActionBtn"
+                fab:fab_size="mini"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_label="Share Note"
+                android:tint="@color/fade_white"/>
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/searchWordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_search_category_default"
+                android:onClick="searchWordBtn"
+                fab:fab_size="mini"
+                app:fab_shadowColor="#FDD835"
+                fab:fab_label="Search Word"
+                android:tint="@color/fade_white"/>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/savebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="savebtnAction"
+                android:src="@android:drawable/ic_menu_save"
+                app:fab_colorNormal="#DA4336"
+                app:fab_shadowColor="#FDD835"
+                app:rippleColor="@color/fade_white"
+                fab:fab_colorRipple="@color/fade_white"
+                fab:fab_label="Save Note"
+                fab:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/MediaSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/edText"
+        android:layout_gravity="left|top|center"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTintMode="src_over"
+        android:keepScreenOn="true"
+        android:layoutDirection="ltr"
+        android:progressTint="#E75043"
+        android:thumbTint="#DA4336"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/recordduration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zeros"
+        android:visibility="invisible"
+        android:gravity="right|top"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="15dp"
+        android:textAlignment="gravity"
+        android:layout_marginStart="80dp"
+        android:textSize="24sp"/>
+
+
+</RelativeLayout>

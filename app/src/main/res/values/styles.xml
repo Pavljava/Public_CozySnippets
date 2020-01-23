@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Design.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="firstExtra" parent="Theme.Design">
+
+    </style>
+    <style name="DialogAnimation1">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    <style name="DialogAnimation2">
+        <item name="android:windowEnterAnimation">@anim/fab_scale_up</item>
+        <item name="android:windowExitAnimation">@anim/fab_scale_down</item>
+    </style>
+
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cornysilk"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:theme="@style/Theme.AppCompat.DayNight">
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="top"
+        android:visibility="visible"
+        android:padding="0dp"
+        android:queryBackground="@drawable/search_back"
+        android:queryHint="@string/search_0"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|top">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="14dp"
+        android:onClick="setting"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        android:id="@+id/settings"
+        android:background="@color/transparent"/>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|top">
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginEnd="42dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_dashboard_black_24dp"
+        android:id="@+id/changeGridBtn"
+        android:onClick="ChangeGridBtn"
+        android:background="@color/transparent" />
+
+    </RelativeLayout>
+
+
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshLayout"
+        android:layout_marginTop="45dp">
+
+            <GridView
+                  android:id="@+id/listFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:backgroundTintMode="screen"
+                    android:paddingTop="50dp"
+                    android:layout_below="@id/search_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/search_bar"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"/>
+
+    </com.baoyz.widget.PullRefreshLayout>
+<!--    <com.trendyol.bubblescrollbarlib.BubbleScrollBar-->
+<!--        android:id="@+id/scroll"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:bubbleBackground="@drawable/the_scroll"-->
+<!--        app:thumbBackground="@color/colorAccent"-->
+<!--        app:scrollbarBackground="@color/dark_grey"-->
+<!--        app:bubbleTextSize="8sp"-->
+<!--        app:bubbleMargin="4dp"-->
+<!--        app:bubbleTextColor="@color/fade_white"-->
+<!--        app:bubbleHeight="50dp"-->
+<!--        app:bubbleElevation="6dp"-->
+<!--        app:bubbleMinWidth="50dp"-->
+<!--        app:bubblePadding="4dp"-->
+<!--        />-->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@id/refreshLayout"
+        android:layout_margin="0dp"
+        android:animateLayoutChanges="true"
+        android:gravity="bottom|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/dark_grey"
+            android:backgroundTintMode="src_over"
+            android:clickable="true"
+            android:focusable="true"
+            android:foregroundGravity="right|bottom"
+            android:onClick="addnewNote"
+            android:tint="@color/fade_white"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="normal"
+            app:layout_constraintVertical_bias="0.11"
+            app:rippleColor="@color/fade_white"
+            app:srcCompat="@android:drawable/ic_input_add" />
+    </RelativeLayout>
+
+</RelativeLayout>

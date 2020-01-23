@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select your Highlight Text color" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_TextColor"
+        android:tag="red"
+        app:backgroundTint="@android:color/holo_red_dark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_TextColor"
+        android:tag="blue"
+        app:backgroundTint="@android:color/holo_blue_dark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_TextColor"
+        android:tag="yellow"
+        app:backgroundTint="@color/aboutYellow" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Select your TextColor" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_SpanColor"
+        android:tag="red"
+        app:backgroundTint="@android:color/holo_red_dark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_SpanColor"
+        android:tag="blue"
+        app:backgroundTint="@android:color/holo_blue_dark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="Listener_For_SpanColor"
+        android:tag="yellow"
+        app:backgroundTint="@color/aboutYellow" />
+
+    <EditText
+        android:id="@+id/searchaWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="  Search Word  "/>
+
+    <Button
+        android:id="@+id/searchWordDialogBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Word" />
+
+    <Button
+        android:id="@+id/cancelWordDialogBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel" />
+</LinearLayout>

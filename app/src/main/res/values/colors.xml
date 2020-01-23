@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffd2aa72</color>
+    <color name="colorPrimaryDark">#fdc19961</color>
+    <color name="colorAccent">#121212</color>
+    <color name="back">#f5deb3</color>
+    <color name="cornysilk">#fff8dc</color>
+    <color name="dark_grey">#141414</color>
+    <color name="fade_white">#fefefe</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="aboutYellow">#FFF000</color>
+    <color name="fab_red_color">#DA4336</color>
+</resources>
